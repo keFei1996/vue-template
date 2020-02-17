@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*
+ CSS初始化
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*
+  自定义CSS
+ */
+
+* {
+  &,
+  &:before,
+  &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  width: 750px;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #0071FF;
+  line-height: 1;
+  font-size: 16px;
+  overflow: auto;
+}
+#app{
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page-contain{
+  height: 100vh;
+  position: relative;
+  background: #fff;
+}
+
+//margin && padding
+$sites:(
+        t: top,
+        r: right,
+        b: bottom,
+        l: left
+);
+
+$sizes:(
+        0: 0,
+        10: 0.133rem,
+        20: 0.267rem,
+        30: 0.4rem,
+        40: 0.533rem
+);
+
+@each $prop,
+$abbrev in ( m: margin,
+        p: padding) {
+  @each $name,
+  $value in $sites {
+    @each $size,
+    $length in $sizes {
+      .#{$prop}-#{$name}-#{$size} {
+        #{$abbrev}-#{$value}: $length;
+      }
+    }
+  }
+}
+
+input{
+  background: #F5F5F5;
+  padding: 26px 0 26px 32px;
+  width: 100%;
+  border-radius:10px;
+  height: 96px;
+  color: #333333;
+  font-size: 32px;
+  border: none;
+  outline:none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999999;
+}
+.button-base{
+  width:622px;
+  height:96px;
+  border-radius:10px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 96px;
+}
+.button-blue{
+  background: #0071FF;
+  color: #FFFFFF;
+}

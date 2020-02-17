@@ -1,0 +1,146 @@
+.scroll-group{
+  flex: 1;
+  overflow-y: auto;
+}
+.mc-page{
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+}
+.mc-header{
+  background: #fff;
+  padding: 16px 8px 32px 8px;
+  height: 576px;
+  /* transition: height 1s; */
+}
+.mc-card{
+  height: 456px;
+  position: relative;
+  padding: 48px 56px 0 56px;
+}
+.img-bg-high{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.mc-card>.first{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 32px;
+}
+.mc-card>.first>.point{
+  font-size: 28px;
+}
+.mc-card>.first>.point>span{
+  font-size: 32px;
+}
+.mc-card>.balance{
+  position: relative;
+  margin-top: 186px;
+  color:rgba(255,255,255,0.7);
+  font-size: 32px;
+}
+.balance-group{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.balance-group>.num{
+  font-size: 64px;
+  color: #fff;
+}
+.balance-group>.balance-pay{
+  width:176px;
+  height:72px;
+  line-height: 72px;
+  text-align: center;
+  border:2px solid rgba(255,255,255,1);
+  border-radius:6px;
+  color: #FFFFFF;
+  font-size: 28px;
+}
+.coupon-text{
+  margin-top: 32px;
+  margin-left: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+.coupon-text>.first{
+  color: #333333;
+  font-size: 40px;
+  font-weight: 500;
+}
+.coupon-text>.second{
+  margin-left: 16px;
+  font-size: 28px;
+  color: #999999;
+}
+.coupon-list{
+  padding: 32px;
+}
+.coupon-item{
+  height:208px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 32px 0 28px;
+}
+.coupon-item .money{
+  font-size: 28px;
+  color: #108EE9;
+  display: flex;
+  align-items: flex-end;
+}
+.coupon-item .money>.num{
+  font-size: 70px;
+  margin-bottom: -10px;
+}
+.coupon-item>.left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 14px;
+}
+.coupon-item>.left>.full{
+  margin-top: 8px;
+  color: #999999;
+  font-size: 26px;
+}
+.coupon-item>.center{
+  margin-left: 14px;
+  flex: 1;
+}
+.coupon-item>.center>.name{
+  font-weight: 500;
+  color: #333333;
+  font-size: 36px;
+}
+.coupon-item>.center>.condition{
+  color: #999999;
+  font-size: 28px;
+}
+.m-t-12{
+  margin-top: 12px;
+}
+.m-t-24{
+  margin-top: 24px;
+}
+.coupon-use{
+  width:176px;
+  height:72px;
+  background:rgba(16,142,233,1);
+  border-radius:6px;
+  text-align: center;
+  line-height: 72px;
+  color: #FFFFFF;
+  font-size: 28px;
+}
+.coupon-item+.coupon-item{
+  margin-top: 32px;
+}

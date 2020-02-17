@@ -1,0 +1,80 @@
+.home{
+  padding: 64px;
+  .title1{
+    color: #333333;
+    font-size: 48px;
+    font-weight:500;
+  }
+  .title2{
+    color: #999999;
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .phone{
+    margin-top: 96px;
+  }
+  .code{
+    margin-top: 32px;
+    position: relative;
+    .getCode{
+      position: absolute;
+      right: 32px;
+      color: #0071FF;
+      font-size: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .home-button{
+    margin-top: 64px;
+  }
+}
+.member-group{
+  height: 64px;
+  margin-top: 104px;
+  border-bottom: 2px solid #F5F5F5;
+  color: #666666;
+  font-size: 32px;
+  display: flex;
+  padding: 0 64px 0 112px;
+  justify-content: space-between;
+  position: relative;
+  .active{
+    color: #0071FF;
+    font-size: 36px;
+    font-weight:500;
+  }
+  .choose-underline{
+    position: absolute;
+    bottom: 0;
+    background: #0071FF;
+    height: 4px;
+    width: 240px;
+    left: 64px;
+  }
+}
+.model-member{
+  width: 632px;
+  height: 806px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .img-vip{
+    margin-top: 48px;
+  }
+  .not-member{
+    font-size: 32px;
+    color: #333333;
+    margin-top: 16px;
+  }
+  .model-tip{
+    color: #999999;
+    font-size: 28px;
+    margin-top: 96px;
+  }
+  .cancel{
+    color: #0071FF;
+    font-size: 32px;
+    margin-top: 100px;
+  }
+}
