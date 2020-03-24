@@ -1,0 +1,85 @@
+import axios from 'axios'
+import QS from 'qs'
+import {Toast} from 'vant'
+import Vue from 'vue'
+
+// 请求基础url
+// 环境的切换
+// if (process.env.NODE_ENV === 'development') {
+//   axios.defaults.baseURL = '/api';
+// } else if (process.env.NODE_ENV === 'production') {
+//   if (process.env.VUE_APP_FLAG === 'pro') {
+//     //production 生产环境
+//     axios.defaults.baseURL = 'https://afts.luxcon.cn';
+//   } else {
+//     //test 测试环境
+//     axios.defaults.baseURL = 'http://hd-admin.9jiudian.com';
+//   }
+// }
+
+// 请求超时时间
+axios.defaults.timeout = 1000 * 40;
+
+// post请求头
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+// axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
+
+// 请求拦截器
+axios.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  // Do something with request error
+  error => Promise.reject(error),
+);
+
+// 添加响应拦截器
+axios.interceptors.response.use((response) => {
+  // 对响应数据做点什么
+  return response.data;
+}, error => {
+  // 对响应错误做点什么
+  if (error.response) {
+    switch (error.response.status) {
+      default:
+        Toast({
+          message: '未知错误',
+          duration: 1000,
+          forbidClick: true,
+        });
+        break;
+    }
+  }
+  return Promise.reject(error);
+});
+
+Vue.prototype.$ajax = axios;
+Vue.prototype.$toQS = (obj) => QS.stringify(obj);
+// export function ApiGet(url, params) {
+//   return new Promise((resolve, reject) => {
+//     axios.get(url, {params}).then((res) => {
+//         resolve(res.data);
+//     })
+//     .catch((err) => {
+//       reject(err.data);
+//     });
+//   });
+// }
+//
+// export function Api (url, params = {}) {
+//   return new Promise((resolve, reject) => {
+//     axios.post(url, QS.stringify(params))
+//       .then((res) => {
+//         resolve(res.data);
+//       })
+//       .catch((err) => {
+//         console.log('err', err);
+//         Toast({
+//           message: '未知错误',
+//           duration: 1000,
+//           forbidClick: true,
+//         });
+//         reject(err.data);
+//       });
+//   });
+// }

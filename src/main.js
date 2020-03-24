@@ -4,8 +4,32 @@ import router from './router'
 import store from './store'
 import './permission'
 import 'lib-flexible'
+import './utils/ajax'
 import './styles/style.scss'
 import './styles/project.scss'
+import VConsole from 'vconsole'
+
+if(process.env.NODE_ENV !== 'production' || process.env.VUE_APP_FLAG !== 'pro') {
+  new VConsole()
+}
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies);
+
+// 设置不同环境的域名
+if (process.env.NODE_ENV === 'development') {
+  Vue.prototype.$baseUrl = '/api';
+  Vue.prototype.$couponUrl = '/coupon'
+} else if (process.env.NODE_ENV === 'production') {
+  if (process.env.VUE_APP_FLAG === 'pro') {
+    //production 生产环境
+    Vue.prototype.$baseUrl = 'https://faceqr.luxcon.cn';
+    // Vue.prototype.$couponUrl = '/coupon'
+  } else {
+    //test 测试环境
+    Vue.prototype.$baseUrl = 'https://dev.luxcon.cn';
+    Vue.prototype.$couponUrl = 'http://facedprd.luxcon.cn'
+  }
+}
 
 import { Toast, Popup } from 'vant'
 Vue.use(Toast)
