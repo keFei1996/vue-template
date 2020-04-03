@@ -27,6 +27,13 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 // 请求拦截器
 axios.interceptors.request.use(
   (config) => {
+    // const hasToken = getToken()
+    // if (hasToken) {
+    //   // let each request carry token
+    //   // ['X-Token'] is a custom headers key
+    //   // please modify it according to the actual situation
+    //   config.headers['Authorization'] = 'Bearer ' + hasToken;
+    // }
     return config;
   },
   // Do something with request error
@@ -36,20 +43,19 @@ axios.interceptors.request.use(
 // 添加响应拦截器
 axios.interceptors.response.use((response) => {
   // 对响应数据做点什么
+  // let data = response.data;
+  // if(data.code === 401) {
+  //   store.dispatch('user/loginCheck');
+  // }
   return response.data;
 }, error => {
   // 对响应错误做点什么
-  if (error.response) {
-    switch (error.response.status) {
-      default:
-        Toast({
-          message: '未知错误',
-          duration: 1000,
-          forbidClick: true,
-        });
-        break;
-    }
-  }
+  console.log('err' + error) // for debug
+  Toast({
+    message: error.message,
+    type: 'fail',
+    duration: 2000
+  });
   return Promise.reject(error);
 });
 
