@@ -19,7 +19,7 @@
     <van-popup v-model="show">
       <div class="model-member">
         <img class="img-vip" src="@/assets/images/img_vip.png" alt="">
-        <div class="not-member">抱歉，您还不是九点云商会员</div>
+        <div class="not-member">抱歉，jenkin测试</div>
         <div class="model-tip">您可通过刷脸支付成为会员</div>
         <div class="cancel" @click="modelCancel">取消</div>
       </div>

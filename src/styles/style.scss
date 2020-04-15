@@ -120,13 +120,6 @@ $abbrev in ( m: margin,
 }
 
 input{
-  background: #F5F5F5;
-  padding: 26px 0 26px 32px;
-  width: 100%;
-  border-radius:10px;
-  height: 96px;
-  color: #333333;
-  font-size: 32px;
   border: none;
   outline:none;
 }
@@ -148,10 +141,17 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   height:96px;
   border-radius:10px;
   font-size: 32px;
-  text-align: center;
-  line-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .button-blue{
   background: #0071FF;
   color: #FFFFFF;
+}
+
+.one_line_ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
