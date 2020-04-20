@@ -3,6 +3,8 @@ module.exports = {
   publicPath: './',
   // 输出文件
   outputDir: process.env.outputDir,
+  // 关闭map文件
+  productionSourceMap: false,
   devServer: {
     host: '0.0.0.0',
     port: 8080,
