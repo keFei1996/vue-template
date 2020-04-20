@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  import { priceSwitch } from '../../utils/public-method'
+  import { priceSwitch } from '../../utils/moneys'
   export default {
     name: "coupon",
     data() {
