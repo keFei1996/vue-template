@@ -14,9 +14,9 @@ const constantRoutes = [
     meta: { title: '首页'}
   },
   {
-    path: '/coupon',
-    component: () => import('@/views/coupon/coupon.vue'),
-    meta: { title: '会员优惠'}
+    path: '/login',
+    component: () => import('@/views/login/login.vue'),
+    meta: { title: '登录'}
   },
 ]
 

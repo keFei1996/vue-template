@@ -1,4 +1,13 @@
-.img-vip{
-  width: 374px;
-  height: 362px;
+.button-base{
+  width:622px;
+  height:96px;
+  border-radius:10px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-blue{
+  background: #0071FF;
+  color: #FFFFFF;
 }

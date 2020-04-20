@@ -83,7 +83,7 @@ body{
   -webkit-overflow-scrolling: touch;
 }
 
-.page-contain{
+.page_pub{
   height: 100vh;
   position: relative;
   background: #fff;
@@ -99,10 +99,11 @@ $sites:(
 
 $sizes:(
         0: 0,
-        10: 0.133rem,
-        20: 0.267rem,
-        30: 0.4rem,
-        40: 0.533rem
+        10: 10px,
+        20: 20px,
+        30: 30px,
+        40: 40px,
+        50: 50px
 );
 
 @each $prop,
@@ -136,7 +137,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #999999;
 }
-.button-base{
+.button_base_pub{
   width:622px;
   height:96px;
   border-radius:10px;
@@ -145,7 +146,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 }
-.button-blue{
+.button_blue_pub{
   background: #0071FF;
   color: #FFFFFF;
 }
@@ -154,4 +155,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.m-0{
+  margin: 0 !important;
+}
+
+.p-0{
+  padding: 0 !important;
+}
+
+.w100{
+  width: 100% !important;
+}
+
+.flex1{
+  flex: 1;
 }

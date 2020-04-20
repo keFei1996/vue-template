@@ -11,7 +11,7 @@ import wx from 'weixin-js-sdk'
 import VConsole from 'vconsole'
 
 if(process.env.NODE_ENV !== 'production' || process.env.VUE_APP_FLAG !== 'pro') {
-  new VConsole()
+  // new VConsole()
 }
 
 import moment from 'moment'//导入文件

@@ -1,7 +1,12 @@
 <template>
-  <div class="home">
-    <div class="title1">欢迎使用九点云商</div>
-    <div class="title2">请选择身份后进行支付</div>
+  <div class="home skeleton">
+    <skeleton selector="skeleton"
+              loading="chiaroscuro"
+              bgcolor="transparent"
+              unit="px"
+              v-if="showSkeleton"></skeleton>
+    <div class="title1 skeleton-rect">欢迎使用九点云商</div>
+    <div class="title2 skeleton-radius">请选择身份后进行支付</div>
     <div class="member-group">
       <div class="active">会员支付</div>
       <div>非会员支付</div>
@@ -28,6 +33,7 @@
 </template>
 
 <script>
+  import skeleton from '../../components/skeleton/skeleton'
 export default {
   name: 'home',
   data(){
@@ -35,12 +41,14 @@ export default {
       codeSending: false,
       timeInterval: null,
       time: 60,
-      show: true,
+      show: false,
       phone: '',
-      code: ''
+      code: '',
+      showSkeleton: true
     }
   },
   components: {
+    skeleton
   },
   methods:{
     // 限制长度
@@ -65,6 +73,11 @@ export default {
     modelCancel() {
       this.show = false
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.showSkeleton = false
+    }, 3000)
   }
 }
 </script>
