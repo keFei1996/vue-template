@@ -18,7 +18,7 @@ export function checkMoney(val) {
 
 // 把money加上，号
 export const priceSwitch = function(val) {
-  if(!val) {
+  if(val === undefined) {
     return val
   }
   val = val.toString();
