@@ -180,3 +180,47 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #D8D7D7;
   transform: scaleY(0.5);
 }
+
+.font_bold{
+  font-weight: bold;
+}
+
+.imgGroup_box{
+  padding: 24px 32px;
+  background: #fff;
+}
+.imgGroup_box>.imgs{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -14rpx;
+}
+.imgGroup_box>.imgs>.img_item{
+  width: 128px;
+  height: 128px;
+  margin-right: 12px;
+  position: relative;
+  margin-bottom: 16px;
+}
+.imgGroup_box>.imgs>.img_item>.load_img{
+  width: 100%;
+  height: 100%;
+}
+.del_img{
+  width: 32px;
+  height: 32px;
+}
+.imgGroup_box>.imgs>.img_item>.del_img{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+.imgGroup_box>.imgs>.camera{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:1px dotted rgba(216,215,215,1);
+  color: #CCC9C9;
+  font-size: 20px;
+}

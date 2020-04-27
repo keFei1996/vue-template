@@ -42,3 +42,23 @@ export const passwordLevel = function(password) {
     return modeTotal;
   }
 }
+
+//校验邮箱
+export const validMail = function(mail) {
+  var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+  if (re.test(mail)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//校验银行卡号
+export const validBankNum = function(bankNum) {
+  var pattern = /^([1-9]{1})(\d{11}|\d{15}|\d{16}|\d{17}|\d{18})$/;
+  if (pattern.test(bankNum)) {
+    return true;
+  } else {
+    return false;
+  }
+}

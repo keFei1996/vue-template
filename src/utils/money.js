@@ -31,6 +31,7 @@ export const priceSwitch = function(val) {
     integer = val.slice(0, index);
     decimal = val.slice(index);
   }
+  // 整数段每隔三个一个逗号
   let result = [], counter = 0;
   for (let i = integer.length - 1; i >= 0; i--) {
     counter++;
@@ -38,5 +39,28 @@ export const priceSwitch = function(val) {
     if (!(counter % 3) && i != 0) { result.unshift(','); }
   }
   result = result.join('');
+  if(decimal.length  > 3) {
+    decimal = decimal.slice(0, 3)
+  }
   return result + decimal
+}
+
+export const keepDecimal2 = function (val) {
+  if(val === undefined) {
+    return val
+  }
+  val = val.toString();
+  let index = val.indexOf('.');
+  let integer, decimal;   // 整数，小数
+  if (index < 0) {
+    integer = val;
+    decimal = '';
+  }else {
+    integer = val.slice(0, index);
+    decimal = val.slice(index);
+  }
+  if(decimal.length  > 3) {
+    decimal = decimal.slice(0, 3)
+  }
+  return integer + decimal
 }
