@@ -18,7 +18,7 @@ import Vue from 'vue'
 // }
 
 // 请求超时时间
-axios.defaults.timeout = 1000 * 40;
+axios.defaults.timeout = 1000 * 10;
 
 // post请求头
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
@@ -61,31 +61,4 @@ axios.interceptors.response.use((response) => {
 
 Vue.prototype.$ajax = axios;
 Vue.prototype.$toQS = (obj) => QS.stringify(obj);
-// export function ApiGet(url, params) {
-//   return new Promise((resolve, reject) => {
-//     axios.get(url, {params}).then((res) => {
-//         resolve(res.data);
-//     })
-//     .catch((err) => {
-//       reject(err.data);
-//     });
-//   });
-// }
-//
-// export function Api (url, params = {}) {
-//   return new Promise((resolve, reject) => {
-//     axios.post(url, QS.stringify(params))
-//       .then((res) => {
-//         resolve(res.data);
-//       })
-//       .catch((err) => {
-//         console.log('err', err);
-//         Toast({
-//           message: '未知错误',
-//           duration: 1000,
-//           forbidClick: true,
-//         });
-//         reject(err.data);
-//       });
-//   });
-// }
+export default axios

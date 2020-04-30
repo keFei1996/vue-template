@@ -1,15 +1,16 @@
+export const validIdCard = function (val) {
+  const reg=/^((\d{18})|([0-9x]{18})|([0-9X]{18}))$/;
+  return reg.test(val)
+}
+
 // 手机号验证
-export const validateMobilePhone = (value) => {
-  var reg=/^1[3456789]\d{9}$/;
-  if(reg.test(value)) {
-    return true
-  }else {
-    return false
-  }
+export const validTel = (val) => {
+  const reg=/^1[3456789]\d{9}$/;
+  return reg.test(val)
 };
 
 // 密码须包含数字、字母、符号至少2种或以上元素
-export const passwordLevel = function(password) {
+export const validPassword = function(password) {
   let Modes = [];
   for (let i = 0; i < password.length; i++) {
     Modes.push(CharMode(password.charCodeAt(i)))
@@ -44,21 +45,50 @@ export const passwordLevel = function(password) {
 }
 
 //校验邮箱
-export const validMail = function(mail) {
-  var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-  if (re.test(mail)) {
-    return true;
-  } else {
-    return false;
-  }
+export const validEmail = function(val) {
+  const reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+  return reg.test(val)
 }
 
 //校验银行卡号
-export const validBankNum = function(bankNum) {
-  var pattern = /^([1-9]{1})(\d{11}|\d{15}|\d{16}|\d{17}|\d{18})$/;
-  if (pattern.test(bankNum)) {
-    return true;
-  } else {
-    return false;
+export const validBankNum = function(val) {
+  const reg = /^([1-9]{1})(\d{11}|\d{15}|\d{16}|\d{17}|\d{18})$/;
+  return reg.test(val)
+}
+
+// 6位验证码
+export const telCode = function(val) {
+  const reg = /^\d{6}$/;
+  return reg.test(val)
+}
+
+/**
+ * @param {string} url
+ * @returns {Boolean}
+ */
+export function validURL(url) {
+  const reg = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/
+  return reg.test(url)
+}
+
+/**
+ * @param {string} str
+ * @returns {Boolean}
+ */
+export function isString(str) {
+  if (typeof str === 'string' || str instanceof String) {
+    return true
   }
+  return false
+}
+
+/**
+ * @param {Array} arg
+ * @returns {Boolean}
+ */
+export function isArray(arg) {
+  if (typeof Array.isArray === 'undefined') {
+    return Object.prototype.toString.call(arg) === '[object Array]'
+  }
+  return Array.isArray(arg)
 }
