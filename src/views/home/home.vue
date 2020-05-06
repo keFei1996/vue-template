@@ -20,7 +20,7 @@
       <div v-if="!codeSending" class="getCode" @click="getCodeClick">获取验证码</div>
       <div v-else class="getCode">重新获取({{ time }}s)</div>
     </div>
-    <div class="button-base button-blue home-button">登录</div>
+    <div class="button-base button-blue home-button" @click="loginClick">登录</div>
     <van-popup v-model="show">
       <div class="model-member">
         <img class="img-vip" src="@/assets/images/img_vip.png" alt="">
@@ -51,6 +51,12 @@ export default {
     skeleton
   },
   methods:{
+    loginClick() {
+      // this.$router.push({
+      //   path: '/test'
+      // })
+      console.log('点击登录')
+    },
     // 限制长度
     limitLength(name, length) {
       if(this[name].length > length) {
@@ -77,7 +83,7 @@ export default {
   created() {
     setTimeout(() => {
       this.showSkeleton = false
-    }, 3000)
+    }, 2000)
   }
 }
 </script>

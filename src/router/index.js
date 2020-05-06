@@ -18,6 +18,11 @@ const constantRoutes = [
     component: () => import('@/views/login/login.vue'),
     meta: { title: '登录'}
   },
+  {
+    path: '/test',
+    component: () => import('@/views/test/test.vue'),
+    meta: { title: '测试'}
+  },
 ]
 
 const createRouter = () => new Router({
