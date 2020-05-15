@@ -151,10 +151,18 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #FFFFFF;
 }
 
+// 单行省略号
 .one_line_ellipsis{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.three_line_ellipsis{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; //行数
+  overflow: hidden;
 }
 
 .m-0{
