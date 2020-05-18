@@ -1,4 +1,4 @@
-# aggregate-code
+# vue-template
 
 ## Project setup
 ```
