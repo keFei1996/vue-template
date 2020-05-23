@@ -83,7 +83,7 @@ body{
   -webkit-overflow-scrolling: touch;
 }
 
-.page_pub{
+.page-pub{
   height: 100vh;
   position: relative;
   background: #fff;
@@ -137,7 +137,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #999999;
 }
-.button_base{
+.button-base{
   width:622px;
   height:96px;
   border-radius:10px;
@@ -146,19 +146,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 }
-.button_blue{
+.button-blue{
   background: #0071FF;
   color: #FFFFFF;
 }
 
 // 单行省略号
-.one_line_ellipsis{
+.one-line-ellipsis{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.three_line_ellipsis{
+.three-line-ellipsis{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3; //行数
@@ -181,8 +181,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   flex: 1;
 }
 
+.m-h-100{
+  min-height: 100vh;
+}
+
 // 公共分割线
-.line_pub{
+.line-pub{
   width: 100%;
   height:1px;
   background: #D8D7D7;
@@ -190,42 +194,42 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 字体加粗
-.font_bold{
+.font-bold{
   font-weight: bold;
 }
 
 // 照片组合
-.imgGroup_box{
+.imgGroup-box{
   padding: 24px 32px;
   background: #fff;
 }
-.imgGroup_box>.imgs{
+.imgGroup-box>.imgs{
   display: flex;
   flex-wrap: wrap;
   margin-right: -14px;
 }
-.imgGroup_box>.imgs>.img_item{
+.imgGroup-box>.imgs>.img-item{
   width: 128px;
   height: 128px;
   margin-right: 12px;
   position: relative;
   margin-bottom: 16px;
 }
-.imgGroup_box>.imgs>.img_item>.load_img{
+.imgGroup-box>.imgs>.img-item>.load-img{
   width: 100%;
   height: 100%;
 }
-.del_img{
+.del-img{
   width: 32px;
   height: 32px;
 }
-.imgGroup_box>.imgs>.img_item>.del_img{
+.imgGroup-box>.imgs>.img-item>.del-img{
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(50%, -50%);
 }
-.imgGroup_box>.imgs>.camera{
+.imgGroup-box>.imgs>.camera{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,15 +240,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 加载动画
-.loader_pub {
+.loader-pub {
   position: relative;
   font-size: 14px;
   height: 100px;
 }
 
-.loader_pub>.outer,
-.loader_pub>.middle,
-.loader_pub>.inner {
+.loader-pub>.outer,
+.loader-pub>.middle,
+.loader-pub>.inner {
   border: 3px solid transparent;
   border-top-color: #1A5DAC;
   border-right-color: #1A5DAC;
@@ -254,7 +258,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   left: 40%;
 }
 
-.loader_pub>.outer {
+.loader-pub>.outer {
   width: 3.5em;
   height: 3.5em;
   margin-left: -1.75em;
@@ -262,7 +266,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   animation: spin 2s linear infinite;
 }
 
-.loader_pub>.middle {
+.loader-pub>.middle {
   width: 2.1em;
   height: 2.1em;
   margin-left: -1.05em;
@@ -270,14 +274,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   animation: spin 1.75s linear reverse infinite;
 }
 
-.loader_pub>.inner {
+.loader-pub>.inner {
   width: 0.8em;
   height: 0.8em;
   margin-left: -0.4em;
   margin-top: -0.4em;
   animation: spin 1.5s linear infinite;
 }
-.loader_pub>.title{
+.loader-pub>.title{
   font-size: 30px;
   position: absolute;
   left: 53%;
@@ -285,7 +289,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   transform: translate(-50%, -50%)
 }
 
-.loadAll_pub{
+.loadAll-pub{
   height: 100px;
   line-height: 100px;
   text-align: center;
@@ -301,7 +305,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 标签动画
-.label_animation::after {
+.label-animation::after {
   content: '';
   z-index: -1;
   background-color: hsla(0, 0%, 100%, 0.2);

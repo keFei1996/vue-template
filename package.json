@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build:prod": "vue-cli-service build",
-    "build:stage": "vue-cli-service build --mode test"
+    "build:stage": "vue-cli-service build --mode stage",
+    "build:prod": "vue-cli-service build"
   },
   "dependencies": {
     "axios": "^0.19.2",
