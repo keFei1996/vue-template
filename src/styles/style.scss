@@ -337,3 +337,38 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #0071FF;
   color: #FFFFFF;
 }
+
+//  tab选择栏
+.select_group{
+  position: sticky;
+  top: 0;
+  height:88rpx;
+  background: #fff;
+  padding: 0 32rpx;
+  z-index: 100;
+}
+.select_group>.select_group_son{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+}
+.select_group>.select_group_son>.select_item{
+  font-size: 32rpx;
+  color: #231815;
+  display: flex;
+  align-items: center;
+}
+.select_group>.select_group_son>.select_item.active{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.select_group_line{
+  position: absolute;
+  left: 56rpx;
+  bottom: 4rpx;
+  width: 24rpx;
+  height: 6rpx;
+  background:#E60012;
+  transition: left 0.5s;
+}
