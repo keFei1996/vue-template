@@ -12,8 +12,8 @@ export const compressImage = (ev, success, error) => {
     return
   }
   let file = ev.target.files[0];
-  let quality = 0.9;
-  const sizeRatio = parseInt(file.size/ Math.pow(1024, 2))
+  let quality = 0.9;    // 压缩质量
+  const sizeRatio = parseInt(file.size/ Math.pow(1024, 2));   // 文件大小
   if(sizeRatio < 0.1) {
     quality = 0.5
   }else {
@@ -24,7 +24,6 @@ export const compressImage = (ev, success, error) => {
   reader.readAsDataURL(file);
   reader.onload = (e) => {
     const src = e.target.result;
-
     const img = new Image();
     img.src = src;
     img.onload = () => {
@@ -44,11 +43,9 @@ export const compressImage = (ev, success, error) => {
       //铺底色 PNG转JPEG时透明区域会变黑色
       ctx.fillStyle = "#fff";
       ctx.fillRect(0, 0, w, h);
-
       ctx.drawImage(img, 0, 0, w, h);
       // quality值越小，所绘制出的图像越模糊
       const base64 = canvas.toDataURL('image/jpeg', quality); //图片格式jpeg或webp可以选0-1质量区间
-
       // 返回base64转blob的值
       console.log(`原图${(src.length/1024).toFixed(2)}kb`, `新图${(base64.length/1024).toFixed(2)}kb`);
       //去掉url的头，并转换为byte
@@ -71,3 +68,68 @@ export const compressImage = (ev, success, error) => {
     error(e);
   }
 }
+
+// 以下为小程序批量上传图片
+
+// 图片队列
+// function queue(urls, cb) {
+//   let promise = Promise.resolve()
+//   urls.forEach((url) => {
+//     promise = promise.then(() => {
+//       return uploadFile(url, cb)
+//     })
+//   })
+//   return promise
+// }
+//
+// function uploadFile(url, cb) {
+//   let that = this;
+//   return new Promise((resolve, reject) => {
+//     wx.uploadFile({
+//       url: Api.API_BASE_URL + '/mini/upload', //仅为示例，非真实的接口地址
+//       filePath: url,
+//       name: 'file',
+//       header: {
+//         'content-type': 'application/x-www-form-urlencoded',
+//       },
+//       success({ data }) {
+//         // 成功返回示例
+//         data = JSON.parse(data)
+//         if (data.code === 0) {
+//           console.log(data)
+//           if(cb) {
+//             cb(data)
+//           }
+//           resolve()
+//         } else {
+//           reject(data.msg)
+//         }
+//       },
+//       fail(err) {
+//         reject(err)
+//       }
+//     })
+//   })
+// }
+// export const imgBatch = (num = 1, cb) => {
+//   wx.chooseImage({
+//     count: num,
+//     sizeType: ['compressed'],
+//     sourceType: ['album', 'camera'],
+//     success(res) {
+//       // tempFilePath可以作为img标签的src属性显示图片
+//       const tempFilePaths = res.tempFilePaths;
+//       wx.showLoading({
+//         title: '图片上传中',
+//         mask: true
+//       })
+//       queue(tempFilePaths, cb).then(res => {
+//         wx.hideLoading();
+//       })
+//       .catch(err => {
+//         app.toast(err);
+//         wx.hideLoading()
+//       });
+//     }
+//   })
+// }

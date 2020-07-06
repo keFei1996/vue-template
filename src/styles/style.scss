@@ -374,3 +374,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background:#E60012;
   transition: left 0.5s;
 }
+
+.row{
+  display: flex;
+}
+.row_align_center{
+  display: flex;
+  align-items: center;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.col_align_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
