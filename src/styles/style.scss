@@ -113,8 +113,8 @@ $abbrev in ( m: margin,
   $value in $sites {
     @each $size,
     $length in $sizes {
-      .#{$prop}-#{$name}-#{$size} {
-        #{$abbrev}-#{$value}: $length;
+      .#{$prop}_#{$name}_#{$size} {
+        #{$abbrev}_#{$value}: $length;
       }
     }
   }
@@ -137,7 +137,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #999999;
 }
-.button-base{
+.button_base{
   width:622px;
   height:96px;
   border-radius:10px;
@@ -146,19 +146,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 }
-.button-blue{
+.button_blue{
   background: #0071FF;
   color: #FFFFFF;
 }
 
 // 单行省略号
-.one-line-ellipsis{
+.one_line_ellipsis{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.three-line-ellipsis{
+.three_line_ellipsis{
   display: -webkit-box;
   /* autoprefixer: ignore next */
   -webkit-box-orient: vertical;
@@ -167,11 +167,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-overflow: ellipsis;
 }
 
-.m-0{
+.m_0{
   margin: 0 !important;
 }
 
-.p-0{
+.p_0{
   padding: 0 !important;
 }
 
@@ -183,12 +183,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   flex: 1;
 }
 
-.m-h-100{
+.m_h_100{
   min-height: 100vh;
 }
 
 // 公共分割线
-.line-pub{
+.line_pub{
   width: 100%;
   height:1px;
   background: #D8D7D7;
@@ -196,42 +196,42 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 字体加粗
-.font-bold{
+.font_bold{
   font-weight: bold;
 }
 
 // 照片组合
-.imgGroup-box{
+.imgGroup_box{
   padding: 24px 32px;
   background: #fff;
 }
-.imgGroup-box>.imgs{
+.imgGroup_box>.imgs{
   display: flex;
   flex-wrap: wrap;
   margin-right: -14px;
 }
-.imgGroup-box>.imgs>.img-item{
+.imgGroup_box>.imgs>.img_item{
   width: 128px;
   height: 128px;
   margin-right: 12px;
   position: relative;
   margin-bottom: 16px;
 }
-.imgGroup-box>.imgs>.img-item>.load-img{
+.imgGroup_box>.imgs>.img_item>.load_img{
   width: 100%;
   height: 100%;
 }
-.del-img{
+.del_img{
   width: 32px;
   height: 32px;
 }
-.imgGroup-box>.imgs>.img-item>.del-img{
+.imgGroup_box>.imgs>.img_item>.del_img{
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(50%, -50%);
 }
-.imgGroup-box>.imgs>.camera{
+.imgGroup_box>.imgs>.camera{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,15 +242,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 加载动画
-.loader-pub {
+.loader_pub {
   position: relative;
   font-size: 14px;
   height: 100px;
 }
 
-.loader-pub>.outer,
-.loader-pub>.middle,
-.loader-pub>.inner {
+.loader_pub>.outer,
+.loader_pub>.middle,
+.loader_pub>.inner {
   border: 3px solid transparent;
   border-top-color: #1A5DAC;
   border-right-color: #1A5DAC;
@@ -260,7 +260,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   left: 40%;
 }
 
-.loader-pub>.outer {
+.loader_pub>.outer {
   width: 3.5em;
   height: 3.5em;
   margin-left: -1.75em;
@@ -268,7 +268,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   animation: spin 2s linear infinite;
 }
 
-.loader-pub>.middle {
+.loader_pub>.middle {
   width: 2.1em;
   height: 2.1em;
   margin-left: -1.05em;
@@ -276,14 +276,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   animation: spin 1.75s linear reverse infinite;
 }
 
-.loader-pub>.inner {
+.loader_pub>.inner {
   width: 0.8em;
   height: 0.8em;
   margin-left: -0.4em;
   margin-top: -0.4em;
   animation: spin 1.5s linear infinite;
 }
-.loader-pub>.title{
+.loader_pub>.title{
   font-size: 30px;
   position: absolute;
   left: 53%;
@@ -291,7 +291,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   transform: translate(-50%, -50%)
 }
 
-.loadAll-pub{
+.loadAll_pub{
   height: 100px;
   line-height: 100px;
   text-align: center;
@@ -307,7 +307,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 // 标签动画
-.label-animation::after {
+.label_animation::after {
   content: '';
   z-index: -1;
   background-color: hsla(0, 0%, 100%, 0.2);
@@ -326,7 +326,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
-.button-base{
+.button_base{
   width:622px;
   height:96px;
   border-radius:10px;
@@ -335,7 +335,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 }
-.button-blue{
+.button_blue{
   background: #0071FF;
   color: #FFFFFF;
 }
