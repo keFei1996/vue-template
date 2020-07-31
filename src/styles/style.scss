@@ -114,7 +114,7 @@ $abbrev in ( m: margin,
     @each $size,
     $length in $sizes {
       .#{$prop}_#{$name}_#{$size} {
-        #{$abbrev}_#{$value}: $length;
+        #{$abbrev}-#{$value}: $length;
       }
     }
   }

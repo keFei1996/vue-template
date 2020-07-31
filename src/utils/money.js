@@ -64,3 +64,15 @@ export const keepDecimal2 = function (val) {
   }
   return integer + decimal
 }
+
+// 判断金额是否有效
+export function moneyValid(money) {
+  const reg = /^(([1-9]\d*)(\.\d{1,2})?)$|(0\.0?([1-9]\d?))$/;
+  return reg.test(money);
+}
+
+// 判断金额是否有效,可以为0
+export function moneyValidZero(money) {
+  const reg = /^(([1-9]\d*)|0)(\.\d{1,2})?$/;
+  return reg.test(money);
+}
