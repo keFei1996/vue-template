@@ -3,8 +3,13 @@
 </template>
 
 <script>
+  import Bignumber from "../../utils/bignumber.min"
   export default {
-    name: "test"
+    name: "test",
+    created() {
+      let num = Bignumber(0.00000)
+      console.log(num.isEqualTo(0))
+    }
   }
 </script>
 

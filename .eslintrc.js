@@ -22,7 +22,9 @@ module.exports = {
     // 关闭语句强制分号结尾
     "semi": [0],
     "no-undef": 0,
-    'no-useless-escape': 0
+    'no-useless-escape': 0,
+    "no-cond-assign": 0,
+    "no-prototype-builtins": 0
   },
 
   parserOptions: {
