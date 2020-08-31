@@ -24,7 +24,9 @@ module.exports = {
     "no-undef": 0,
     'no-useless-escape': 0,
     "no-cond-assign": 0,
-    "no-prototype-builtins": 0
+    "no-prototype-builtins": 0,
+    "quotes": 0,    // 双引号报错
+    'space-infix-ops': 0,   // -号空格
   },
 
   parserOptions: {
