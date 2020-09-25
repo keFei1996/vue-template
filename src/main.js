@@ -7,6 +7,7 @@ import 'lib-flexible'
 import './utils/ajax'
 import './styles/style.scss'
 import './styles/project.scss'
+import './styles/zStyle.scss'
 import wx from 'weixin-js-sdk'
 import VConsole from 'vconsole'
 
@@ -14,10 +15,8 @@ if(process.env.NODE_ENV !== 'production' || process.env.VUE_APP_FLAG !== 'pro') 
   // new VConsole()
 }
 
-import moment from 'moment'//导入文件
-Vue.prototype.$moment = moment;//赋值使用
-
-moment.locale('zh-cn');//需要汉化
+import dayjs from 'dayjs'//导入文件
+Vue.prototype.$dayjs = dayjs;//赋值使用
 
 Vue.prototype.$wx = wx;
 
