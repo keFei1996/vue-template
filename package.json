@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "better-mock": "^0.2.9",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.36",
     "js-cookie": "^2.2.1",

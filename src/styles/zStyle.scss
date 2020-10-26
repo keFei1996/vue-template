@@ -96,17 +96,37 @@ $abbrev in ( m: margin,
 /*
 表单列表
  */
+.z-from-card{
+  background: #F4F8FB;
+  padding: 10px 10px 0 10px;
+}
 .z-form-item{
   display: flex;
   align-items: center;
-  height: 40px;
-  margin-bottom: 22px;
+  height: 95px;
+  padding: 0 20px;
+  background: #fff;
   .z-left{
-    width: 100px;
-    text-align: right;
+    width: 160px;
+    text-align: left;
+    font-size: 28px;
+    color: #333333;
   }
   .z-right{
+    position: relative;
     flex: 1;
+    input{
+      max-width: 90%;
+    }
+    .close-style{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+    }
+  }
+  &.border{
+    border-top: 1px solid #EAEAEA;
   }
 }
 /*

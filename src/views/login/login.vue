@@ -5,8 +5,20 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import Mock from 'better-mock'
+  import user from '../../api/user'
+  Mock.mock('/vue-element-admin/user/login', {
+    'list|1-10': [{
+      'id|+1': 1,
+      'email': '@EMAIL'
+    }]
+  })
   export default {
     name: "login",
+    created() {
+      this.postLogin()
+    },
     methods: {
       // 点击登录
       loginClick() {
@@ -14,6 +26,11 @@
           path: '/home'
         })
       },
+      postLogin() {
+        user.login({}).then((res) => {
+          console.log(res)
+        })
+      }
     }
   }
 </script>
