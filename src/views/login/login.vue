@@ -1,6 +1,6 @@
 <template>
   <div>login
-    <div @click="loginClick">登录</div>
+    <div @click="loginClick" class="login-name">登录</div>
   </div>
 </template>
 
@@ -35,6 +35,6 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  @import "./login";
 </style>
