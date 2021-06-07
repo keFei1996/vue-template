@@ -36,9 +36,10 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
-import { Toast, Popup } from 'vant'
+import { Toast, Popup, Uploader } from 'vant'
 Vue.use(Toast)
   .use(Popup)
+  .use(Uploader)
 
 Vue.config.productionTip = false
 
